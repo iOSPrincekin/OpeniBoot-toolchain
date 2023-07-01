@@ -19,3 +19,8 @@ The commands are as follows:
 ./build-toolchain.sh clean
 
 Logs are stored in $TOOLCHAIN_PATH/build.log ( by default /tmp/ipl-toolchain/build.log )
+
+
+# BUILD
+
+use custom os centos 7(3.10.0-1160.76.1.el7.x86_64) in wmware build it success!
