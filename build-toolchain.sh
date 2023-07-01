@@ -26,7 +26,7 @@ PKG_URLS[2]="ftp://sourceware.org/pub/newlib/newlib-1.14.0.tar.gz"
 # Package Patches
 PATCH_GCC411_ARMELF="t-arm-elf.patch"
 PATCH_NEWLIB_MAKEINFO="newlib-1.14.0-missing-makeinfo.patch"
-
+PATCH_LIB1FUNCS="lib1funcs.patch"
 
 if [ -z "$IPHONELINUXDEV" ]; then
 	PREFIX=/usr/local
@@ -211,6 +211,7 @@ stage_gcc_patch() {
 	echo "- Patching GCC for t-arm-elf"
 	cd $TOOLCHAIN_PATH
 	log patch -p0 < $PATCH_GCC411_ARMELF
+	log patch -p0 < $PATCH_LIB1FUNCS
 	checkRet "Failed to apply patch for t-arm-elf"
 }
 
